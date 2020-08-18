@@ -1,0 +1,11 @@
+# Caddyserver
+
+server.freighttrust.com
+
+root * /var/www
+reverse_proxy /api/* localhost:5000
+file_server
+
+root *           /var/www  # matcher token: *
+root /index.html /var/www  # matcher token: /index.html
+root @post       /var/www  # matcher token: @post
